@@ -79,7 +79,6 @@
             animation: gradient-animation 15s ease infinite;
         }
 
-        /* New styles for the title highlight */
         .title-highlight {
             color: #5DADE2; /* A lighter, vibrant blue that fits the theme */
             text-shadow: 0 0 10px rgba(93, 173, 226, 0.7);
@@ -93,7 +92,7 @@
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-white flex items-center gap-3">
                 <!-- IMPORTANT: Replace with the correct path to your logo -->
-                <img src="assets/plg-minining_200-removebg-preview.png" alt="PLG Logo" class="h-10 w-auto">
+                 <img src="assets/plg-minining_200-removebg-preview.png" alt="PLG Logo" class="h-10 w-auto">
                 <span>CMMS<span class="text-accent-blue">.</span>FRONTEND</span>
             </h1>
             <div class="hidden md:flex space-x-8">
@@ -101,7 +100,6 @@
                 <a href="#tech-stack" class="text-gray-300 hover:text-white transition font-medium">Technology</a>
                 <a href="#architecture" class="text-gray-300 hover:text-white transition font-medium">Architecture</a>
                 <a href="#features" class="text-gray-300 hover:text-white transition font-medium">Features</a>
-                <a href="#security" class="text-gray-300 hover:text-white transition font-medium">Security</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden focus:outline-none text-white">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -113,7 +111,6 @@
             <a href="#tech-stack" class="block py-2 text-gray-300 hover:text-white">Technology</a>
             <a href="#architecture" class="block py-2 text-gray-300 hover:text-white">Architecture</a>
             <a href="#features" class="block py-2 text-gray-300 hover:text-white">Features</a>
-            <a href="#security" class="block py-2 text-gray-300 hover:text-white">Security</a>
         </div>
     </header>
 
@@ -143,7 +140,6 @@
             <!-- Technology Stack -->
             <section id="tech-stack" class="mb-20 md:mb-28 fade-in-up">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title text-dark-blue">Technology Stack</h2>
-                <!-- MODIFIED SECTION START -->
                 <div class="space-y-8">
                     <!-- Top Row: Flutter & Dart -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -186,80 +182,121 @@
                         </div>
                     </div>
                 </div>
-                <!-- MODIFIED SECTION END -->
             </section>
 
             <!-- Architecture -->
-            <section id="architecture" class="mb-20 md:mb-28 bg-card-bg p-8 md:p-12 rounded-lg shadow-xl fade-in-up">
+            <section id="architecture" class="mb-16 md:mb-24 bg-card-bg p-8 rounded-lg shadow-xl fade-in-up">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title text-dark-blue">Clean Architecture & Design</h2>
-                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                    <div class="md:w-1/2">
-                        <h3 class="text-2xl font-semibold text-primary-blue mb-4">Layered Approach</h3>
-                        <p class="mb-4 text-gray-600">The project follows a strict Clean Architecture with a clear separation of concerns, making it highly maintainable and scalable.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-center gap-3"><span class="bg-blue-100 text-primary-blue rounded-full p-1">&#10003;</span><strong>Models</strong>: Data entities with JSON serialization.</li>
-                            <li class="flex items-center gap-3"><span class="bg-blue-100 text-primary-blue rounded-full p-1">&#10003;</span><strong>Repositories</strong>: Data access layer for API communication.</li>
-                            <li class="flex items-center gap-3"><span class="bg-blue-100 text-primary-blue rounded-full p-1">&#10003;</span><strong>Controllers</strong>: Business logic with Provider state management.</li>
-                            <li class="flex items-center gap-3"><span class="bg-blue-100 text-primary-blue rounded-full p-1">&#10003;</span><strong>Services</strong>: Infrastructure services (API, Auth).</li>
-                            <li class="flex items-center gap-3"><span class="bg-blue-100 text-primary-blue rounded-full p-1">&#10003;</span><strong>Views</strong>: UI layer organized by feature modules.</li>
-                        </ul>
-                    </div>
-                    <div class="md:w-1/2 mt-8 md:mt-0">
-                        <h3 class="text-2xl font-semibold text-primary-blue mb-4">Dependency Injection</h3>
-                        <p class="text-gray-600">Utilizes the <strong>GetIt service locator pattern</strong> for efficient dependency injection. It employs sophisticated factory and singleton registrations to prevent state sharing conflicts, ensuring a robust and predictable application state.</p>
+                <div class="max-w-4xl mx-auto text-center">
+                    <h3 class="text-2xl font-semibold text-primary-blue mb-4">A Robust and Scalable Foundation</h3>
+                    <p class="mb-8 text-gray-600">
+                        The application is structured in distinct layers to enhance maintainability and scalability. This design follows a strict dependency rule where outer layers depend on inner layers, but not vice versa, creating a robust and decoupled system.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                        <!-- UI / Views -->
+                        <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                            <h4 class="text-xl font-bold text-dark-blue mb-2">UI / Views</h4>
+                            <p class="text-gray-700">Responsible for presenting data to the user and handling user interactions through Flutter widgets.</p>
+                        </div>
+                        <!-- Controllers -->
+                        <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                            <h4 class="text-xl font-bold text-dark-blue mb-2">Controllers</h4>
+                            <p class="text-gray-700">Contains application-specific business logic and manages the state of the user interface.</p>
+                        </div>
+                        <!-- Repositories -->
+                        <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                            <h4 class="text-xl font-bold text-dark-blue mb-2">Repositories</h4>
+                            <p class="text-gray-700">Manages data operations by abstracting data sources from the rest of the application.</p>
+                        </div>
+                        <!-- Models -->
+                        <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                            <h4 class="text-xl font-bold text-dark-blue mb-2">Models</h4>
+                            <p class="text-gray-700">Represents the core business entities and data structures of the application.</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Core Features -->
+            <!-- Core Features & Modules -->
             <section id="features" class="mb-20 md:mb-28 fade-in-up">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title text-dark-blue">Core Features & Modules</h2>
-                <div class="space-y-8">
-                    <!-- Feature Cards -->
-                    <div class="bg-card-bg p-6 rounded-lg shadow-md feature-card flex flex-col sm:flex-row items-start gap-6">
-                        <div class="bg-blue-100 text-primary-blue p-4 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg></div>
-                        <div><h3 class="text-xl font-semibold mb-1 text-dark-blue">Authentication & User Management</h3><p class="text-gray-600">JWT-based authentication with secure token storage and automatic refresh. Features granular Role-Based Access Control (RBAC) supporting Super Users, COOs, and regular users.</p></div>
-                    </div>
-                    <div class="bg-card-bg p-6 rounded-lg shadow-md feature-card flex flex-col sm:flex-row items-start gap-6">
-                        <div class="bg-blue-100 text-primary-blue p-4 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></div>
-                        <div><h3 class="text-xl font-semibold mb-1 text-dark-blue">Comprehensive Form Management</h3><p class="text-gray-600">The core of the application. Includes a form designer, submission handling with file attachments, form viewing, and management of various question types and answer formats.</p></div>
-                    </div>
-                    <div class="bg-card-bg p-6 rounded-lg shadow-md feature-card flex flex-col sm:flex-row items-start gap-6">
-                        <div class="bg-blue-100 text-primary-blue p-4 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.124-1.282-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.124-1.282.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div>
-                        <div><h3 class="text-xl font-semibold mb-1 text-dark-blue">User & Permission Management</h3><p class="text-gray-600">Full CRUD operations for users with role assignment and environment-based organization. A detailed permission matrix links roles to specific permissions.</p></div>
-                    </div>
-                    <div class="bg-card-bg p-6 rounded-lg shadow-md feature-card flex flex-col sm:flex-row items-start gap-6">
-                        <div class="bg-blue-100 text-primary-blue p-4 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg></div>
-                        <div><h3 class="text-xl font-semibold mb-1 text-dark-blue">Analytics & Reporting</h3><p class="text-gray-600">A powerful dashboard displays key metrics and performance indicators. Features advanced analytics with chart generation and data export functionality for comprehensive reporting.</p></div>
-                    </div>
-                </div>
-            </section>
+                <div class="space-y-10">
 
-            <!-- Security & Performance -->
-            <section id="security" class="fade-in-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 section-title text-dark-blue">Security & Performance</h2>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-card-bg p-8 rounded-lg shadow-md feature-card">
-                        <h3 class="text-xl font-semibold text-primary-blue mb-4 flex items-center gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                            Robust Security Measures
-                        </h3>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-start gap-3"><span class="text-green-500 mt-1">&#10003;</span><strong>JWT Token Management</strong>: Automatic refresh and secure storage.</li>
-                            <li class="flex items-start gap-3"><span class="text-green-500 mt-1">&#10003;</span><strong>Permission-based UI</strong>: Dynamically renders UI to prevent unauthorized access.</li>
-                            <li class="flex items-start gap-3"><span class="text-green-500 mt-1">&#10003;</span><strong>API Request Interception</strong>: Handles authentication and errors gracefully.</li>
-                        </ul>
+                    <!-- User Management Module -->
+                    <div class="bg-card-bg p-6 rounded-lg shadow-md feature-card">
+                        <div class="flex flex-col sm:flex-row items-start gap-6">
+                            <div class="bg-blue-100 text-primary-blue p-4 rounded-lg flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.124-1.282-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.124-1.282.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-dark-blue">User Management Module</h3>
+                                <p class="text-gray-600 mb-4">Comprehensive user administration, handling registration, profiles, role assignment, and environment-based access control.</p>
+                                <h4 class="font-semibold text-primary-blue mb-2">Key Frontend Aspects:</h4>
+                                <ul class="list-disc list-inside space-y-1 text-gray-600">
+                                    <li><strong>Real-time Search:</strong> Instantly find users with live filtering by role and environment.</li>
+                                    <li><strong>Efficient Pagination:</strong> Smoothly navigate large user lists with configurable page sizes.</li>
+                                    <li><strong>Integrated Navigation:</strong> Seamlessly switch between user, role, and permission management screens.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-card-bg p-8 rounded-lg shadow-md feature-card">
-                        <h3 class="text-xl font-semibold text-primary-blue mb-4 flex items-center gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                            Performance Optimizations
-                        </h3>
-                        <ul class="space-y-3 text-gray-600">
-                            <li class="flex items-start gap-3"><span class="text-green-500 mt-1">&#10003;</span><strong>Client-side Pagination</strong>: Intelligent fallback to server-side for large datasets.</li>
-                            <li class="flex items-start gap-3"><span class="text-green-500 mt-1">&#10003;</span><strong>Data Caching</strong>: Configurable strategies to reduce network requests.</li>
-                            <li class="flex items-start gap-3"><span class="text-green-500 mt-1">&#10003;</span><strong>Lazy Loading</strong>: Efficiently loads controllers and services on demand.</li>
-                        </ul>
+
+                    <!-- Form Designer Module -->
+                    <div class="bg-card-bg p-6 rounded-lg shadow-md feature-card">
+                        <div class="flex flex-col sm:flex-row items-start gap-6">
+                             <div class="bg-blue-100 text-primary-blue p-4 rounded-lg flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-dark-blue">Form Designer Module</h3>
+                                <p class="text-gray-600 mb-4">Enables the creation, management, and configuration of dynamic forms for versatile data collection.</p>
+                                <h4 class="font-semibold text-primary-blue mb-2">Key Frontend Aspects:</h4>
+                                <ul class="list-disc list-inside space-y-1 text-gray-600">
+                                    <li><strong>Debounced Search:</strong> Reduces server load and improves performance during form discovery.</li>
+                                    <li><strong>State Preservation:</strong> Maintains form state during navigation for a seamless editing experience.</li>
+                                    <li><strong>Automatic Refresh:</strong> Ensures data consistency by automatically updating lists after edits.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Submission & View Submission Modules -->
+                    <div class="bg-card-bg p-6 rounded-lg shadow-md feature-card">
+                        <div class="flex flex-col sm:flex-row items-start gap-6">
+                            <div class="bg-blue-100 text-primary-blue p-4 rounded-lg flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-dark-blue">Form Submission & Viewing Modules</h3>
+                                <p class="text-gray-600 mb-4">Handles the entire lifecycle of a form, from filling and submitting to browsing, searching, and managing submitted data.</p>
+                                <h4 class="font-semibold text-primary-blue mb-2">Key Frontend Aspects:</h4>
+                                <ul class="list-disc list-inside space-y-1 text-gray-600">
+                                    <li><strong>Responsive Design:</strong> Adaptive UI components ensure a great experience on any screen size.</li>
+                                    <li><strong>Client-Side Search:</strong> Provides instant discovery of forms and submissions without server lag.</li>
+                                    <li><strong>State Management:</strong> Prevents accidental data loss with confirmation dialogs and progress tracking.</li>
+                                     <li><strong>Manual Refresh:</strong> Pull-to-refresh functionality keeps submission data synchronized and up-to-date.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Analytics Module -->
+                    <div class="bg-card-bg p-6 rounded-lg shadow-md feature-card">
+                        <div class="flex flex-col sm:flex-row items-start gap-6">
+                            <div class="bg-blue-100 text-primary-blue p-4 rounded-lg flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-dark-blue">Analytics Module</h3>
+                                <p class="text-gray-600 mb-4">Provides comprehensive reporting and data visualization, transforming raw data into business intelligence.</p>
+                                <h4 class="font-semibold text-primary-blue mb-2">Key Frontend Aspects:</h4>
+                                <ul class="list-disc list-inside space-y-1 text-gray-600">
+                                    <li><strong>Centralized Dashboard:</strong> Presents key metrics and provides easy navigation to all analytics features.</li>
+                                    <li><strong>Integrated Chart Builder:</strong> Allows for the creation of custom data visualizations on-the-fly.</li>
+                                    <li><strong>Adaptive Layouts:</strong> Optimizes component sizing and spacing for perfect viewing on any device.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -309,6 +346,7 @@
         document.querySelectorAll('.fade-in-up').forEach(el => {
             observer.observe(el);
         });
+
     </script>
 
 </body>
